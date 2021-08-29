@@ -1,0 +1,23 @@
+# The program to run, can be defined as a direct
+# file path, or as an EXE in the $PATH variable
+program = "busybox.exe"
+programArgs = "bash -c '{data}/start.sh'"
+
+# Working Directory
+workingDirectory = "{data}/"
+
+# Do not include windows path
+# If True, only the data directory will be
+# treated as $PATH
+isolatedPath = true
+
+# Global Environment variables to be set
+# to aid with portability,
+[environment]
+	# Please do not edit these values unless you
+	# know what you are doing
+	APPDATA = "{data}/APPDATA"
+	LOCALAPPDATA = "{data}/APPDATA"
+	HOME = "{data}/"
+	USERPROFILE = "{data}/"
+	# Put your custom environment variables here

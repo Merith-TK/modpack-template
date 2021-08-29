@@ -1,0 +1,17 @@
+## Prevent Vanillia Minecraft folders from being tracked
+.minecraft/coremods
+.minecraft/logs
+.minecraft/resourcepacks
+.minecraft/saves
+.minecraft/screenshots
+.minecraft/server-resource-packs
+.minecraft/texturepacks
+.minecraft/realms_persistence.json
+
+## Ignore Modpack Updater Script loose files
+update-pack.data/.*
+update-pack.data/*/
+update-pack.data/update.sh
+update-pack.data/busybox.exe
+
+## Add your modded folders/files to ignore here
