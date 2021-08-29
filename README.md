@@ -5,6 +5,12 @@ currently this template only supports
 	- Technic
 	- MultiMC
 
+## About the EXE
+The exe is a tool made by me
+https://github.com/Merith-TK/busybox64.portable
+
+it downloads and runs a prebuild busybox.exe to perform tasks, this updating modpack template is an example of what my tool is capable of
+
 ### How to use this?
 - Modpack Makers
 	- Well first your going to need to install `busybox`, `git`, `7zip`, and `make` on your computer, I personally reccomend getting all of these through [Scoop](https://scoop.sh/)
