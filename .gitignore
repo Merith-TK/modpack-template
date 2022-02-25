@@ -10,6 +10,7 @@
 
 ## Ignore Modpack Updater Script loose files
 .technic
+*.zip
 
 ## Add your modded folders/files to ignore here
 .minecraft/mods/
