@@ -1,13 +1,13 @@
-name = "Phosphor"
+name = "Phosphor (Fabric)"
 filename = "phosphor-fabric-mc1.18.x-0.8.1.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/hEOCdOgW/versions/mc1.18.x-0.8.1/phosphor-fabric-mc1.18.x-0.8.1.jar"
+url = "https://edge.forgecdn.net/files/3573/395/phosphor-fabric-mc1.18.x-0.8.1.jar"
 hash-format = "sha1"
 hash = "9b826d21b9cd999853a57c76b0c47ee4d9161dc9"
 
 [update]
-[update.modrinth]
-mod-id = "hEOCdOgW"
-version = "HG1UaV1y"
+[update.curseforge]
+file-id = 3573395
+project-id = 372124
