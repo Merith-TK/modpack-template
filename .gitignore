@@ -9,9 +9,9 @@
 .minecraft/realms_persistence.json
 
 ## Ignore Modpack Updater Script loose files
-update-pack.data/.*
-update-pack.data/*/
-update-pack.data/update.sh
-update-pack.data/busybox.exe
+.technic
 
 ## Add your modded folders/files to ignore here
+.minecraft/mods/
+.minecraft/packwiz-installer.jar
+.minecraft/packwiz.json

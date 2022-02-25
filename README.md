@@ -5,20 +5,18 @@ currently this template only supports
 	- Technic
 	- MultiMC
 
-## About the EXE
-The exe is a tool made by me
-https://github.com/Merith-TK/busybox64.portable
-
-it downloads and runs a prebuild busybox.exe to perform tasks, this updating modpack template is an example of what my tool is capable of
-
 ### How to use this?
 - Modpack Makers
-	- Well first your going to need to install `busybox`, `git`, `7zip`, and `make` on your computer, I personally reccomend getting all of these through [Scoop](https://scoop.sh/)
+	- Well first your going to need to install `busybox`, `git`, `go` `7zip`, and `make` on your computer, I personally reccomend getting all of these through [Scoop](https://scoop.sh/)
 	- After installing scoop, just run
-		- `scoop install busybox git make 7zip`
+		- `scoop install busybox git go make 7zip`
+		- after you run the previous command, run
+			- `go install github.com/packwiz/packwiz@latest`
 		- and everything should be there, 
 	- I reccomend using VSCode to manage your modpack as you have a full visual editor and git manager built in.
-	- TO build a release, you simply need to open a terminal, (git-bash, cmd, or even powershell) inside the modpack folder, and run `make <insert release>`, for example, `make technic` will make a technic release zip, and running it again will modify it so it doesnt have issues with having to make a new file share link, same with `multimc`
+	- to add mods, run `packwiz <curseforge or modrinth> install <modid>`
+		- for sodium from modrinth, `packwiz modrinth install sodium`
+	- to make a release, run `make multimc` or `make technic`
 
 	- Dont forget to make a git repo for your modpack, I reccomend using [GitLab](https://gitlab.com) due to its free Large File Support.
 
