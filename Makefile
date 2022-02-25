@@ -11,22 +11,23 @@ default:
 	@echo "Techic will make a pack that can be used for technic"
 	@echo ""
 	@echo "All will make both technic and MultiMC packs"
-
+	@echo ""
+	
 multimc:
-	-rm  -rf update-pack.data/temp
-	-rm  -rf update-pack.data/bin
-	-rm  -rf update-pack.data/busybox.exe
+	@echo "Making MultiMC pack"
 	7z d ../modpack.zip ./* -r
 	7z d ../modpack.zip ./.* -r
 	7z a ../modpack.zip ./* -r
-	7z a ../modpack.zip ./.git -r
 	7z a ../modpack.zip ./.minecraft -r
 
 technic:
+	@echo "Making Technic pack"
+	-rm -rf .technic
+	-cp -r .minecraft .technic
+	mv .technic/modpack.icon.png .technic/icon.png
+	cd .technic && java -jar packwiz-installer-bootstrap.jar https://gitlab.com/Merith-TK/modpack-template/-/raw/packwiz/packwiz-data/pack.toml && cd ..
+	-rm -rf .technic/packwiz*
 	7z d ../modpack-technic.zip ./* -r
-	7z a ../modpack-technic.zip ./.minecraft/* -r
-	cp modpack.icon.png icon.png
-	7z a ../modpack-technic.zip ./icon.png
-	rm icon.png
+	7z a ../modpack-technic.zip ./.technic/* -r
 
 all: multimc technic
