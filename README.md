@@ -33,13 +33,5 @@ currently this template only supports
 			- Edit this so that you can name your release zips how you want them to
 
 
-	- I highly suggest using this mod or simular to push custom configs as players may make changes to their settings which *will* break the updater
-		- https://www.curseforge.com/minecraft/mc-mods/yosbr
-
 - Modpack Users
-	- MultiMC
-		- Add this into your instance settings if not already there
-		- `$INST_DIR/update-pack.exe`
-		- ![](https://i.imgur.com/wjBuHYG.png)
-	- Technic
-		- Nothing, your modpack maintainer will use this tool to make new technic releases automatically
+	- You have no need to look at this repo as it stands at the moment, 
