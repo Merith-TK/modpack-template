@@ -17,16 +17,19 @@ default:
 	
 curseforge:
 	@echo "Making Curseforge pack"
-	@-mkdir ../modpack.curseforge
+	@-mkdir ../modpack-curseforge
 	packwiz curseforge export --mods-folder packwiz-data/mods/ --pack-file packwiz-data/pack.toml
+	cp -r .minecraft overrides
+	7z a *.zip overrides 
+	rm -rf overrides
 	mv *.zip ../modpack-curseforge/
 
 multimc:
 	@echo "Making MultiMC pack"
-	7z d ../modpack-mulitmc.zip ./* -r
-	7z d ../modpack-mulitmc.zip ./.* -r
-	7z a ../modpack-mulitmc.zip ./* -r
-	7z a ../modpack-mulitmc.zip ./.minecraft -r
+	7z d ../modpack-multimc.zip ./* -r
+	7z d ../modpack-multimc.zip ./.* -r
+	7z a ../modpack-multimc.zip ./* -r
+	7z a ../modpack-multimc.zip ./.minecraft -r
 
 technic:
 	@echo "Making Technic pack"
