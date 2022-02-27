@@ -41,4 +41,8 @@ technic:
 	7z d ../modpack-technic.zip ./* -r
 	7z a ../modpack-technic.zip ./.technic/* -r
 
-all: curseforge multimc technic
+clean:
+	-rm -rf .technic
+	-git gc --aggressive --prune
+
+all: curseforge multimc technic clean
