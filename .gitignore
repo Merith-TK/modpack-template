@@ -11,8 +11,8 @@
 ## Ignore Modpack Updater Script loose files
 .technic
 *.zip
+*.mrpack
 
 ## Add your modded folders/files to ignore here
-.minecraft/mods/
 .minecraft/packwiz-installer.jar
 .minecraft/packwiz.json

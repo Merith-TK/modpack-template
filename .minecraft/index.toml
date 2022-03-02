@@ -1,6 +1,14 @@
 hash-format = "sha256"
 
 [[files]]
+file = "bin/version.json"
+hash = "b5f8dc11af2e5d2eeb17007a53fced417fdb3020baac8a8f8dd230a2d3fd854e"
+
+[[files]]
+file = "modpack.icon.png"
+hash = "50f74a7debb4a852e1384434500515f2478b8dcf0d71b75eba148ca34d89715c"
+
+[[files]]
 file = "mods/lithium.toml"
 hash = "5a5c6174eda3db8594761efaf64308c44702b3f2a25957b0c35825b0109a1ef0"
 metafile = true
@@ -14,3 +22,7 @@ metafile = true
 file = "mods/sodium.toml"
 hash = "4aba93a705eb2c6300818297bc1d85329b9b085392810dbf15c79b5e3dd6d0ef"
 metafile = true
+
+[[files]]
+file = "packwiz-installer-bootstrap.jar"
+hash = "a8fbb24dc604278e97f4688e82d3d91a318b98efc08d5dbfcbcbcab6443d116c"
