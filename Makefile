@@ -48,3 +48,6 @@ clean:
 	-git gc --aggressive --prune
 
 all: curseforge modrinth multimc technic clean
+
+update-packwiz:
+	go install github.com/packwiz/packwiz@latest
