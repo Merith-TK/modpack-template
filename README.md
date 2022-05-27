@@ -1,18 +1,33 @@
 ## Update Pack Template
 This is a template modpack makers can use to easily release their modpack onto multiple platforms.
 currently this template only supports 
-- Windows
-	- Technic
-	- MultiMC
+- Curseforge
+	- Please note recent API changes to curseforge have broken support for most mods from curseforge in the other three formats
+	- Multi/PolyMC requires users to download mods manually
+	- Technc requires modpack makers to download mods manually
+	- Modrinth just doesnt support it at all
+- [Multi/PolyMC](https://polymc.org)
+- Technic
+- Modrinth
+
 
 ### How to use this?
 - Modpack Makers
-	- Well first your going to need to install `busybox`, `git`, `go` `7zip`, and `make` on your computer, I personally reccomend getting all of these through [Scoop](https://scoop.sh/)
-	- After installing scoop, just run
-		- `scoop install busybox git go make 7zip`
-		- after you run the previous command, run
-			- `go install github.com/packwiz/packwiz@latest`
-		- and everything should be there, 
+	- Well first your going to need to install `busybox`, `git`, `go` `7zip`, and `make` on your computer,
+	- On Windows I personally reccomend getting all of these through [Scoop](https://scoop.sh/)
+		- After installing scoop, just run
+			- `scoop install busybox git go make 7zip`
+	- On Linux,
+		- Ubuntu/Debian
+			- `sudo apt install git p7zip make`
+			- golang needs the latest release, which is unfortunately not in the repos, please manually install it, there are plenty of guides online for this
+		- Arch
+			- please use an AUR helper such as `yay`
+			- `yay -Syu git go p7zip make`
+	
+	- after you install go, run this command to install packwiz
+		- `go install github.com/packwiz/packwiz@latest`
+
 	- I reccomend using VSCode to manage your modpack as you have a full visual editor and git manager built in.
 	- to add mods, run `packwiz <curseforge or modrinth> install <modid>`
 		- for sodium from curseforge, `packwiz cf install sodium`
