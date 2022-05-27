@@ -12,6 +12,7 @@ currently this template only supports
 
 
 ### How to use this?
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-908a85?logo=gitpod)](https://gitpod.io/from-referrer/)
 - Modpack Makers
 	- Well first your going to need to install `busybox`, `git`, `go` `7zip`, and `make` on your computer,
 	- On Windows I personally reccomend getting all of these through [Scoop](https://scoop.sh/)
