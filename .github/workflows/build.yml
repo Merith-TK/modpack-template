@@ -1,0 +1,39 @@
+name: Build Modpack
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main  # Change this to your preferred branch
+    tags-ignore:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '16'  # Change to '8' for Java 8
+
+      - name: Install 7z
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y p7zip-full
+
+      - name: Install Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: '1.23'
+
+      - name: Update Packwiz
+        run: make update-packwiz
+
+      - name: Make Modpack
+        run: make preClean multimc curseforge modrinth postClean
