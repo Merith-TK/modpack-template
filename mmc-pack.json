@@ -2,7 +2,7 @@
     "components": [
         {
             "uid": "net.minecraft",
-            "version": "1.21.1"
+            "version": "1.21.3"
         },
         {
             "cachedName": "LWJGL 3",
@@ -14,7 +14,7 @@
         },
         {
             "uid": "net.fabricmc.fabric-loader",
-            "version": "0.16.4"
+            "version": "0.16.9"
         }
     ],
     "formatVersion": 1
