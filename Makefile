@@ -40,7 +40,7 @@ multimc: build
 	7z a .build/${PACKNAME}-multimc.zip ./* -r
 	7z a .build/${PACKNAME}-multimc.zip ./.minecraft -r
 	7z d .build/${PACKNAME}-multimc.zip ./.build ./.minecraft/mods ./.minecraft/pack.toml ./.minecraft/index.toml -r
-	rm ./${ICONNAME}_icon.png
+	-rm ./${ICONNAME}_icon.png
 	@sed -i 's#$(shell pw detect)#{PACKURL}#g' instance.cfg
 	@sed -i 's#${ICONNAME}#{ICONNAME}#g' instance.cfg
 
