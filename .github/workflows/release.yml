@@ -21,8 +21,8 @@ jobs:
 
       - name: Install 7z
         run: |
-          sudo apt-get update
-          sudo apt-get install -y p7zip-full
+          apt-get update
+          apt-get install -y p7zip-full
 
       - name: Install Go
         uses: actions/setup-go@v2
@@ -32,8 +32,14 @@ jobs:
       - name: Update Packwiz
         run: make update-packwiz
 
+      - name: Make Pre-Build Cleanup
+        run: make preClean
+
       - name: Make Modpack
-        run: make preClean multimc curseforge modrinth postClean
+        run: make multimc curseforge modrinth # Change this to your desired build targets
+
+      - name: Make Post-Build Cleanup
+        run: make postClean
 
       - name: Make Modlist
         run: make release-file
