@@ -20,9 +20,7 @@ jobs:
           java-version: '16'  # Change to '8' for Java 8
 
       - name: Install 7z
-        run: |
-          apt-get update
-          apt-get install -y p7zip-full
+        uses: milliewalky/setup-7-zip@v2
 
       - name: Install Go
         uses: actions/setup-go@v2
